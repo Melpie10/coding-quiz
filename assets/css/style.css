@@ -1,0 +1,84 @@
+
+
+body{
+    margin: 0;
+    font-size: 16 px;
+    background-color: darkslategrey;
+    font-family:Arial, Helvetica, sans-serif ;
+    font-weight: 400;
+}
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    outline: none;
+}
+
+.custom-box{
+    max-width: 700px;
+    background-color: rgb(166, 214, 214);
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    
+}
+
+.custom-box .hide{
+    display: none;
+}
+
+.start-box h3{
+    font-size: 18px;
+    color: darkslategray;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 25px;
+}
+
+.start-box p{
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 22px;
+    color: darkslategrey;
+    font-weight: 400;
+}
+
+.start-box .btn{
+    margin-top: 20px;
+}
+
+.btn{
+    padding: 15px 45px;
+    background-color: #009688;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.answers-box .question-text{
+    font-size: 25px;
+    color:rgb(43, 107, 107);
+    padding: 20px 0;
+    font-weight: 300;
+    margin: 0;
+
+}
+
+.answers-box .option-container{
+
+}
+
+.answers-box .option-container .options{
+    background-color:rgb(43, 107, 107);
+    padding: 13px;
+    font-size: 16px;
+    line-height: 30px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+

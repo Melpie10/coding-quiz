@@ -1,4 +1,18 @@
-body{
+header {
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+#questions {
+    display: none;
+}
+
+#end-of-quiz {
+    display: none;
+}
+
+
+/* body{
     margin: 0;
     font-size: 16 px;
     background-color: darkslategrey;
@@ -22,9 +36,9 @@ body{
     
 }
 
-/* .custom-box {
+.custom-box {
     display: none;
-}*/
+}
 
 .start-box h3{
     font-size: 18px;
@@ -67,7 +81,7 @@ body{
 
 }
 
-.questions-box .option-container{
+//.questions-box .option-container{
     border-bottom: 1px solid#020202;
     padding-bottom: 10px;
     line-height: 25 px;
@@ -102,4 +116,4 @@ body{
     font:bold15px Helvetica, sans-serif;
     text-shadow:none;
     cursor: pointer;
-}
+} */

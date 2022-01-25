@@ -15,55 +15,57 @@
     <!-- High Scores menu -->
         <div class="row">
             <div class="col-md-11"> 
-                <h3>High Scores </h3>
+                <h3 type="button" class="btn btn-secondary" > High Scores </h3>
             </div>
-            <p id="timer" class="col-md-1">60</p>
+            <p id="timer" class="col-md-1">Timer: 60</p>
         </div>
     </header>
 
     <main class="col-sm-6 mx-auto">
     <!-- Quiz main screen  -->
-    <div>  <!-- class="start-box custom-box"> -->
-        <h3> Coding Quiz Challenge</h3>
+    <div class="start-box custom-box">
+        <h3 class="text-primary"> Coding Quiz Challenge</h3>
         <p>Do you know the basic knowledge a coder must have? Take this quiz to find out! Make sure you save your name to keep track of your scores. Good luck!</p>
-        <button class="btn btn-primary" onclick="startQuiz()"> Start Quiz</button>
+        <!-- <button class="btn btn-primary start_btn" > Start Quiz</button> -->
+        <div class=" btn btn-primary start_btn"><button>Start Quiz</button></div>
     </div>
 
 
     <!-- Quiz questions -->
-    <div id="questions">
-    <!--class="questions-box custom-box"-->
-        <div class="question-text"> 1. Lorem ipsum dolor sit amet consectetur adipisicing elit...</div>
-        <div>
-            <button id="choice1" onclick="checkAnswer ('a')">A</button>
-            <button id="choice2" onclick="checkAnswer ('b')">B</button>
-            <button id="choice3" onclick="checkAnswer ('c')">C</button>
-            <button id="choice4" onclick="checkAnswer ('d')">D</button>
+    <div class="quiz_box"></div>
+    <section>
+        <div class="que_text">
         </div>
-        <!-- <div class="answers-indicator"> 
-            <p>Wrong or rightss!</p>
-        </div>  -->
+        <div class="option_list">
+        </div>
+    </section>
+     class="questions-box custom-box"
+
+        <div class="answers-indicator"> 
+            <p>Wrong or rights!</p>
+        </div> 
     </div>
 
     <!-- ALL DONE - final score screen -->
-    <div id="end-of-quiz"> <!--class="questions-box custom-box"--> 
+    <div id="results-box" class="questions-box custom-box"> 
         <h3> All Done!! </h3>   
         <h4>Your final score is: 100</h4>   
             <p>  
                 <form id="scoreinitials" action="'">
                     <label for="initials">Enter your initials:</label><br>
                     <input type="text" id="initials" name="initials" ><br>
-                    <input type="submit"value="submit"> 
+                    <input type="submit" value="submit"> 
                 </form>
             </p>
         </div> 
     </div>
 
-
-
     </main>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/questions.js"></script>
+    
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
+

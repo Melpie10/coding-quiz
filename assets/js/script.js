@@ -1,15 +1,18 @@
-const start_btn = document.querySelector();//(".start_btn button");
-const quiz_box = document.querySelector();//(".quiz_box");
-const result_box = document.querySelector();//(".result_box");
-const option_list = document.querySelector();//(".option_list");
+// We need: a start button
+// high scores - add event listener for it to show up after amount of time or at the end
+// event listeners for submit button after quiz ends
+// add to event listeners event.preventDefault()
+//write out real questions
 
-start_btn.onclick = ()=>{
-quiz_box.classList.add("activeQuiz"); //show quiz box
-    showQuestions(0); //calling showQuestions function
-    queCounter(1); //passing 1 parameter to queCounter
-    startTimer(60); //calling startTimer function
-    startTimerLine(0); //calling startTimerLine function
-}
+
+const start_btn = document.querySelector('#start_btn');//(".start_btn button");
+const quiz_box = document.querySelector('#quiz_box');//(".quiz_box");
+const result_box = document.querySelector('#result_box');//(".result_box");
+const option_list = document.querySelector('#option_list'); //(".option_list");
+
+//const submit = result_box.querySelector(".buttons .restart");
+//const quit_quiz = result_box.querySelector(".buttons .quit");
+
 let timeValue =  60;
 let que_count = 0;
 let que_numb = 1;
@@ -18,8 +21,7 @@ let counter;
 let counterLine;
 let widthValue = 0;
 
-const submit = result_box.querySelector(".buttons .restart");
-const quit_quiz = result_box.querySelector(".buttons .quit");
+
 
 function showQuestions(index){
   const que_text = document.querySelector(".que_text");
@@ -79,7 +81,7 @@ var final
 
 var count = 60;
 var timer = setInterval(function() {
-  console.log(count);
+  //console.log(count);
   count--;
   if(count === 0) {
     stopInterval()
@@ -90,3 +92,20 @@ var stopInterval = function() {
   console.log('time is up!');
   clearInterval(timer);
 }
+
+
+// start_btn.onclick = ()=>{
+//   quiz_box.classList.add("activeQuiz"); //show quiz box
+//       showQuestions(0); //calling showQuestions function
+//       queCounter(1); //passing 1 parameter to queCounter
+//       startTimer(60); //calling startTimer function
+//       startTimerLine(0); //calling startTimerLine function
+//   }
+
+// start_btn.addEventListener("click", function(event) {
+//   quiz_box.classList.add("activeQuiz"); //show quiz box
+//   showQuestions(0); //calling showQuestions function
+//   queCounter(1); //passing 1 parameter to queCounter
+//   startTimer(60); //calling startTimer function
+//   startTimerLine(0); //calling startTimerLine function
+// })

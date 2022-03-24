@@ -12,18 +12,15 @@ One of the challenges for this project was to come up with the questions, create
 ## Access
 
 The website can be accessed from Github repository:
-
+https://github.com/Melpie10/coding-quiz
 
 
 It can also be accessed on the live website: 
+https://melpie10.github.io/coding-quiz/
 
  ## Visuals
 
 The website looks like this when opened on Google Chrome: 
- ![Screenshot of API CODING QUIZ]()
-
-The title is now displayed in the tabs:
-![Title Displayed in tabs](./assets/images/Titled-displayed.png)
 
 
 ## Contributing

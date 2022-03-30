@@ -1,7 +1,6 @@
 let questions = [
     {
-    Title: "Question 1",
-    question: "Lorem ipsum dolor sit amet?",
+    Title: "Lorem ipsum dolor sit amet?",
     answer: "3",
     options: [
         "demo-wrong",
@@ -11,8 +10,7 @@ let questions = [
         ]
     },
     {
-    Title: "Question 2",
-    question: "Lorem ipsum dolor sit amet?",
+    Title: "Lorem ipsum dolor sit amet?",
     answer: "2",
     options: [
         "demo-wrong",
@@ -22,8 +20,7 @@ let questions = [
         ]
     },
     {
-    Title: "Question 3",
-    question: "Lorem ipsum dolor sit amet?",
+    Title: "Lorem ipsum dolor sit amet?",
     answer: "1",
     options: [
         "demo-right",
@@ -33,8 +30,7 @@ let questions = [
         ]
     },
     {
-    Title: "Question 4",
-    question: "Lorem ipsum dolor sit amet?",
+    Title: "Lorem ipsum dolor sit amet?",
     answer: "1",
     options: [
         "demo-right",

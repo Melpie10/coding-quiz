@@ -1,42 +1,42 @@
 let questions = [
     {
-    Title: "Lorem ipsum dolor sit amet?",
-    answer: "3",
+    Title: "Inside which HTML element do we put the JavaScript?",
+    answer: "<script>",
     options: [
-        "demo-wrong",
-        "demo-wrong",
-        "demo-right",
-        "demo-wrong",
+        "<scripting>",
+        "<script>",
+        "<javascript>",
+        "<js>",
         ]
     },
     {
-    Title: "Lorem ipsum dolor sit amet?",
-    answer: "2",
+    Title: "Where is the correct place to insert a JavaScript?",
+    answer: "Head and Body Sections",
     options: [
-        "demo-wrong",
-        "demo-right",
-        "demo-wrong",
-        "demo-wrong",
+        "Head and Body Sections",
+        "head section",
+        "body section",
+        "none",
         ]
     },
     {
-    Title: "Lorem ipsum dolor sit amet?",
-    answer: "1",
+    Title: "How do you write 'Hello World' in an alert box?",
+    answer: "alert('hello World')",
     options: [
-        "demo-right",
-        "demo-wrong",
-        "demo-wrong",
-        "demo-wrong",
+        "alert('hello World')",
+        "msgBox('Hello world')",
+        "alertBox('hello world')",
+        "msg('Hello World')",
         ]
     },
     {
-    Title: "Lorem ipsum dolor sit amet?",
-    answer: "1",
+    Title: "How do you call a function named 'myFunction'",
+    answer: "myFunction()",
     options: [
-        "demo-right",
-        "demo-wrong",
-        "demo-wrong",
-        "demo-wrong",
+        "myFunction()",
+        "my Function = () ",
+        "call myFunction()",
+        "call function myFunction()",
         ]
     },
 ];

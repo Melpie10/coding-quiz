@@ -1,20 +1,20 @@
 // elements in html ir order of how i used them (ids)
-var timer = document.querySelector('#timer');
-// var start_box = document.querySelector('#start_box');
+var timerEl = document.querySelector('#timer');
+//var start_box = document.querySelector('#start_box');
 var start_btn = document.querySelector('#start_btn');
-var questions = document.querySelector('#questions');
-var questions_title = document.querySelector('#questions_title');
-var options = document.querySelector('#options'); 
-var results_box = document.querySelector('#results_box');
-var final_score = document.querySelector('#final_score');
-var score_initials = document.querySelector('#score_initials');
-var initials = document.querySelector('#initials');
+var questionsEl = document.querySelector('#questions');
+//var questions_title = document.querySelector('#questions_title');
+var optionsEl = document.querySelector('#options'); 
+//var results_box = document.querySelector('#results_box');
+//var final_score = document.querySelector('#final_score');
+//var score_initials = document.querySelector('#score_initials');
+var initialsEl = document.querySelector('#initials');
 var submit = document.querySelector("#submit");
-var results = document.querySelector('#results');
+var resultsEl = document.querySelector('#results');
 
-let timer =  60;
-let time = questions.length * 15;
-let timerId;
+var currentQuestionIndex = 0;
+var time = questions.length * 15;
+var timerId;
 
 // start quiz
 start_btn.onclick = startQuiz;
@@ -22,17 +22,17 @@ start_btn.onclick = startQuiz;
 // hide start screen
 function startQuiz() {
   
-  var start_box = document.getElementById("start_box");
-  start_box.setAttribute("class", "hide");
+  var start_boxEl = document.getElementById("start_box");
+  start_boxEl.setAttribute("class", "hide");
 
   // un-hide questions section
-  questions.removeAttribute("class");
+  questionsEl.removeAttribute("class");
 
   // start timer
   timerId = setInterval(clockTick, 600);
 
   // show time
-  timer.textContent = time;
+  timerEl.textContent = time;
 
   getQuestion();
 }
@@ -42,8 +42,8 @@ function getQuestion() {
   var currentQuestion = questions[currentQuestionIndex];
 
   // update title with current question
-  var title= document.getElementById("title");
-  title.textContent = currentQuestion.title;
+  var titleEl= document.getElementById("question-title");
+  titleEl.textContent = currentQuestion.title;
 
   // clear out any old question choices
   choices.innerHTML = "";
@@ -77,15 +77,15 @@ function questionClick() {
     }
     // display new time on page
     timerEl.textContent = time;
-    results.textContent = "Wrong!";
+    resultsEl.textContent = "Wrong!";
   } else {
-    results.textContent = "Correct!";
+    resultsEl.textContent = "Correct!";
   }
 
   // flash right/wrong results
-  results.setAttribute("class", "results");
+  resultsEl.setAttribute("class", "results");
   setTimeout(function() {
-    results.setAttribute("class", "results hide");
+    resultsEl.setAttribute("class", "results hide");
   }, 1000);
 
   // next question
@@ -104,8 +104,8 @@ function quizEnd() {
   clearInterval(timerId);
 
   // show end screen
-  var results_box = document.getElementById("results_box");
-  results_box.removeAttribute("class");
+  var results_boxEl = document.getElementById("results_box");
+  results_boxEl.removeAttribute("class");
 
   // show final score
   var final_score = document.getElementById("final_score");
@@ -128,7 +128,7 @@ function clockTick() {
 
 function saveScoreboard() {
   // get value of input box
-  var initials = initials.value.trim();
+  var initials = initialsEl.value.trim();
 
   if (initials !== "") {
     // get saved scores from localstorage, or if not any, set to empty array

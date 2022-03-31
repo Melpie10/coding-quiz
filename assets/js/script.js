@@ -1,16 +1,16 @@
 // elements in html ir order of how i used them (ids)
-const timer = document.querySelector('#timer');
-const start_box = document.querySelector('#start_box');
-const start_btn = document.querySelector('#start_btn');
-const questions = document.querySelector('#questions');
-const questions_title = document.querySelector('#questions_title');
-const options = document.querySelector('#options'); 
-const results_box = document.querySelector('#results_box');
-const final_score = document.querySelector('#final_score');
-const score_initials = document.querySelector('#score_initials');
-const initials = document.querySelector('#initials');
-const submit = document.querySelector("#submit");
-const results = document.querySelector('#results');
+var timer = document.querySelector('#timer');
+// var start_box = document.querySelector('#start_box');
+var start_btn = document.querySelector('#start_btn');
+var questions = document.querySelector('#questions');
+var questions_title = document.querySelector('#questions_title');
+var options = document.querySelector('#options'); 
+var results_box = document.querySelector('#results_box');
+var final_score = document.querySelector('#final_score');
+var score_initials = document.querySelector('#score_initials');
+var initials = document.querySelector('#initials');
+var submit = document.querySelector("#submit");
+var results = document.querySelector('#results');
 
 let timer =  60;
 let time = questions.length * 15;
@@ -22,7 +22,7 @@ start_btn.onclick = startQuiz;
 // hide start screen
 function startQuiz() {
   
-  const start_box = document.getElementById("start_box");
+  var start_box = document.getElementById("start_box");
   start_box.setAttribute("class", "hide");
 
   // un-hide questions section
@@ -39,10 +39,10 @@ function startQuiz() {
 
 function getQuestion() {
   // get current question object from array
-  const currentQuestion = questions[currentQuestionIndex];
+  var currentQuestion = questions[currentQuestionIndex];
 
   // update title with current question
-  const title= document.getElementById("title");
+  var title= document.getElementById("title");
   title.textContent = currentQuestion.title;
 
   // clear out any old question choices
@@ -51,7 +51,7 @@ function getQuestion() {
   // loop over choices
   currentQuestion.choices.forEach(function(choice, i) {
     // create new button for each choice
-    const choiceNode = document.createElement("button");
+    var choiceNode = document.createElement("button");
     choiceNode.setAttribute("class", "choice");
     choiceNode.setAttribute("value", choice);
 
@@ -104,11 +104,11 @@ function quizEnd() {
   clearInterval(timerId);
 
   // show end screen
-  const results_box = document.getElementById("results_box");
+  var results_box = document.getElementById("results_box");
   results_box.removeAttribute("class");
 
   // show final score
-  const final_score = document.getElementById("final_score");
+  var final_score = document.getElementById("final_score");
   final_score.textContent = time;
 
   // hide questions section
@@ -128,19 +128,19 @@ function clockTick() {
 
 function saveScoreboard() {
   // get value of input box
-  const initials = initials.value.trim();
+  var initials = initials.value.trim();
 
   if (initials !== "") {
     // get saved scores from localstorage, or if not any, set to empty array
-    const scoreboard =
+    var scoreboard =
       JSON.parse(window.localStorage.getItem("scoreboard")) || [];
 
     // format new score object for current user
-    const newScore = {
+    var newScore = {
       score: time,
       initials: initials
     };
-    
+
     // save to localstorage
     scoreboard.push(newScore);
     window.localStorage.setItem("scoreboard", JSON.stringify(scoreboard));

@@ -3,7 +3,7 @@ var timerEl = document.querySelector('#timer');
 //var start_box = document.querySelector('#start_box');
 var start_btn = document.querySelector('#start_btn');
 var questionsEl = document.querySelector('#questions');
-//var questions_title = document.querySelector('#questions_title');
+var questions_title = document.querySelector('#questions_title');
 var optionsEl = document.querySelector('#options'); 
 //var results_box = document.querySelector('#results_box');
 //var final_score = document.querySelector('#final_score');
@@ -16,8 +16,7 @@ var currentQuestionIndex = 0;
 var time = questions.length * 15;
 var timerId;
 
-// start quiz
-start_btn.onclick = startQuiz;
+
 
 // hide start screen
 function startQuiz() {
@@ -29,10 +28,10 @@ function startQuiz() {
   questionsEl.removeAttribute("class");
 
   // start timer
-  timerId = setInterval(clockTick, 600);
+  // timerId = setInterval(clockTick, 600);
 
-  // show time
-  timerEl.textContent = time;
+  // // show time
+  // timerEl.textContent = time;
 
   getQuestion();
 }
@@ -42,26 +41,26 @@ function getQuestion() {
   var currentQuestion = questions[currentQuestionIndex];
 
   // update title with current question
-  var titleEl= document.getElementById("question-title");
+  var titleEl= document.getElementById("question_title");
   titleEl.textContent = currentQuestion.title;
 
-  // clear out old question choices
-  choices.innerHTML = "";
+  // clear out old question options
+  optionsEl.innerHTML = "";
 
-  // loop over choices
-  currentQuestion.choices.forEach(function(choice, i) {
-    // create new button for each choice
-    var choiceNode = document.createElement("button");
-    choiceNode.setAttribute("class", "choice");
-    choiceNode.setAttribute("value", choice);
+  // loop over options
+  currentQuestion.options.forEach(function(option, i) {
+    // create new button for each option
+    var optionNode = document.createElement("button");
+    optionNode.setAttribute("class", "option");
+    optionNode.setAttribute("value", option);
 
-    choiceNode.textContent = i + 1 + ". " + choice;
+    optionNode.textContent = i + 1 + ". " + option;
 
-    // attach click event listener to each choice
-    choiceNode.onclick = questionClick;
+    // attach click event listener to each option
+    optionNode.onclick = questionClick;
 
     // display on the page
-    choice.appendChild(choiceNode);
+    optionsEl.appendChild(optionNode);
   });
 }
 
@@ -76,7 +75,7 @@ function questionClick() {
       time = 0;
     }
     // display new time on page
-    timerEl.textContent = time;
+    // timerEl.textContent = time;
     resultsEl.textContent = "Wrong!";
   } else {
     resultsEl.textContent = "Correct!";
@@ -159,4 +158,8 @@ function checkForEnter(event) {
 
 // submit initials
 submit.onclick = saveScoreboard;
+
+// start quiz
+start_btn.onclick = startQuiz;
+
 initials.onkeyup = checkForEnter;

@@ -1,9 +1,9 @@
 // elements in html ir order of how i used them (ids)
-var timerEl = document.querySelector('#timer');
+// var timerEl = document.querySelector('#timer');
 //var start_box = document.querySelector('#start_box');
 var start_btn = document.querySelector('#start_btn');
 var questionsEl = document.querySelector('#questions');
-var questions_title = document.querySelector('#questions_title');
+// var questions_title = document.querySelector('#questions_title');
 var optionsEl = document.querySelector('#options'); 
 //var results_box = document.querySelector('#results_box');
 //var final_score = document.querySelector('#final_score');
@@ -13,8 +13,8 @@ var submit = document.querySelector("#submit");
 var resultsEl = document.querySelector('#results');
 
 var currentQuestionIndex = 0;
-var time = questions.length * 15;
-var timerId;
+// var time = questions.length * 15;
+// var timerId;
 
 
 
@@ -26,6 +26,7 @@ function startQuiz() {
 
   // un-hide questions section
   questionsEl.removeAttribute("class");
+  
 
   // start timer
   // timerId = setInterval(clockTick, 600);
@@ -69,15 +70,9 @@ function questionClick() {
   // check if wrong answer
   if (this.value !== questions[currentQuestionIndex].answer) {
     // penalize time
-    time -= 15;
-
-    if (time < 0) {
-      time = 0;
-    }
-    // display new time on page
-    // timerEl.textContent = time;
     resultsEl.textContent = "Wrong!";
-  } else {
+  } 
+  else {
     resultsEl.textContent = "Correct!";
   }
 
@@ -93,14 +88,14 @@ function questionClick() {
   // time checker
   if (currentQuestionIndex === questions.length) {
     quizEnd();
-  } else {
+  } 
+  else {
     getQuestion();
   }
 }
 
 function quizEnd() {
-  // stop timer
-  clearInterval(timerId);
+
 
   // show end screen
   var results_boxEl = document.getElementById("results_box");
@@ -114,16 +109,16 @@ function quizEnd() {
   questionsEl.setAttribute("class", "hide");
 }
 
-function clockTick() {
-  // update time
-  time--;
-  timer.textContent = time;
+// function clockTick() {
+//   // update time
+//   time--;
+//   timer.textContent = time;
 
-  // check if user ran out of time
-  if (time <= 0) {
-    quizEnd();
-  }
-}
+//   // check if user ran out of time
+//   if (time <= 0) {
+//     quizEnd();
+//   }
+// }
 
 function saveScoreboard() {
   // get value of input box

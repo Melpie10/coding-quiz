@@ -1,6 +1,6 @@
 let questions = [
     {
-    Title: "Inside which HTML element do we put the JavaScript?",
+    title: "Inside which HTML element do we put the JavaScript?",
     answer: "<script>",
     options: [
         "<scripting>",
@@ -10,7 +10,7 @@ let questions = [
         ]
     },
     {
-    Title: "Where is the correct place to insert a JavaScript?",
+    title: "Where is the correct place to insert a JavaScript?",
     answer: "Head and Body Sections",
     options: [
         "Head and Body Sections",
@@ -20,7 +20,7 @@ let questions = [
         ]
     },
     {
-    Title: "How do you write 'Hello World' in an alert box?",
+    title: "How do you write 'Hello World' in an alert box?",
     answer: "alert('hello World')",
     options: [
         "alert('hello World')",
@@ -30,7 +30,7 @@ let questions = [
         ]
     },
     {
-    Title: "How do you call a function named 'myFunction'",
+    title: "How do you call a function named 'myFunction'",
     answer: "myFunction()",
     options: [
         "myFunction()",
